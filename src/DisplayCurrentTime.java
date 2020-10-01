@@ -15,13 +15,15 @@ public class DisplayCurrentTime {
 		
 		long hours = (minutes / 60);
 		int CurrentHours = (int) (hours % 24) + 2;
-		
+			
+		System.out.println(CurrentHours + ":" + CurrentMinutes + ":" + CurrentSeconds);
+	
+	}	
+			
 	//	(SIN TERMINAR) A partir de aquí no corresponde a lo que se pide, es extra por mi cuenta
 	//	long days = (hours /30);
 	//	int days = (int) (days % 30)
-		
-		System.out.println(CurrentHours + ":" + CurrentMinutes + ":" + CurrentSeconds);
-		
-	}
+	
+	
 
 }
