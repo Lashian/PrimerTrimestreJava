@@ -18,12 +18,16 @@ public class DisplayCurrentTime {
 			
 		System.out.println(CurrentHours + ":" + CurrentMinutes + ":" + CurrentSeconds);
 	
-	}	
+
 			
-	//	(SIN TERMINAR) A partir de aquí no corresponde a lo que se pide, es extra por mi cuenta
-	//	long days = (hours /30);
-	//	int days = (int) (days % 30)
+//		(SIN TERMINAR) A partir de aquí no corresponde a lo que se pide, es extra por mi cuenta
+		
+//		long days = (hours /24);
+//		long CurrentDays = (int) (days % 30);
 	
+//		System.out.println(CurrentDays);
 	
+		
+		}	
 
 }
