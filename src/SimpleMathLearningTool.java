@@ -18,24 +18,14 @@ public class SimpleMathLearningTool {
 		Scanner input = new Scanner (System.in);
 		int enterAnswer = input.nextInt();
 		
-		
 		System.out.println("La solucion es " + (enterAnswer == (numberA + numberB)));
 		
-		
-		
-		
-		
-		
-	//	if (enterAnswer == (numberA + numberB){
-			
-			
-		
-			
-			
-		}
-			
-		
+/*		if (enterAnswer) {
+			System.out.println("Tu respuesta es correcta");
+			}
+				else System.out.println("Tu respuesta es incorrecta."); */
 	}
+}
 
 
 
