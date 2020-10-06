@@ -13,14 +13,14 @@ public class MonetaryUnits {
         System.out.println("Introduzca el numero de monedas de un centimo: ");
 
         int centimos = input.nextInt();
-
-
+        
         int dosEuros = (centimos / 200); 
         centimos -= (dosEuros * 200); 
+   //   centimos = centimos % 200;
 
         int unEuros = (centimos / 100); 
         centimos -= (unEuros * 100); 
-
+        
         int cincuentaCentimos = (centimos / 50); 
         centimos -= (cincuentaCentimos * 50); 
 
@@ -40,7 +40,6 @@ public class MonetaryUnits {
 
 
         System.out.println("Usted posee: ");
-
         System.out.println( + dosEuros + " monedas de dos euros");
         System.out.println( + unEuros + " monedas de un euro");
         System.out.println( + cincuentaCentimos + " monedas de cincuenta centimos");
