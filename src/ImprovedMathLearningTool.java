@@ -3,7 +3,8 @@ import java.util.Scanner;
 public class ImprovedMathLearningTool {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner (System.in);
+        @SuppressWarnings("resource")
+		Scanner input = new Scanner (System.in);
         int numberA = (int) (Math.random() *10);
         int numberB = (int) (Math.random() *10);
         int correctAnswer = numberA >= numberB ? numberA - numberB : numberB - numberA;
