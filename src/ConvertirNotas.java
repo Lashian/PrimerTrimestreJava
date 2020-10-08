@@ -12,8 +12,12 @@ public class ConvertirNotas {
          @SuppressWarnings("resource")
 		Scanner input = new Scanner (System.in);
          double nota = input.nextDouble();
+         
+         if  (nota < 0) {
+        	 System.out.println("Por favor, introduce una nota valida.");
+         }
 
-         if (nota < 5) {
+         else if (nota < 5) {
              System.out.println("Insuficiente.");
 
          }
@@ -30,5 +34,6 @@ public class ConvertirNotas {
          else if(nota <= 10) {
              System.out.println("Sobresaliente.");
          }
+         else System.out.println("Por favor introduce una nota válida.");
      }
 }
