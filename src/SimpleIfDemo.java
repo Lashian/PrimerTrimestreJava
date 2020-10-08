@@ -35,5 +35,4 @@ public class SimpleIfDemo {
         }
         else  System.out.println(b + ", " + c +", "  + a);
     }
-
 }
