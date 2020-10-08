@@ -9,7 +9,8 @@ public class convertirNotas {
          System.out.println("Conversor de notas.");
          System.out.println("Por favor, introduzca una nota a compartir: ");
 
-         Scanner input = new Scanner (System.in);
+         @SuppressWarnings("resource")
+		Scanner input = new Scanner (System.in);
          double nota = input.nextDouble();
 
          if (nota < 5) {
