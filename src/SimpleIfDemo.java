@@ -15,6 +15,7 @@ public class SimpleIfDemo {
 
         System.out.println("Los numeros generados son: " + a + ", " + b + ", " + c + ".");
 
+        
         if(a > b && c > a) {
             System.out.println(c +", " + a +", " + b);
         }
