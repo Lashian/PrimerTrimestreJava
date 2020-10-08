@@ -5,7 +5,7 @@ public class convertirNotas {
 
     //Crear un programa que convierta notas numeras a notas alfabeticas
     // Ej: Un 6 seria un bien
-    // Un 9 seria un sobresaliente, etc.
+    // Un 9 seria un sobresaliente
          System.out.println("Conversor de notas.");
          System.out.println("Por favor, introduzca una nota a compartir: ");
 
