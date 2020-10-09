@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//
 public class CalcularMedia {
 
 	public static void main(String[] args) {

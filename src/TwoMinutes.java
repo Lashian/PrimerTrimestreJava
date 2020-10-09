@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//
 public class TwoMinutes {
 
 	public static void main(String[] args) {

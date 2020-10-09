@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//
 public class ComputingLoan {
 
 	public static void main(String[] args) {

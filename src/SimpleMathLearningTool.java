@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//
 public class SimpleMathLearningTool {
 
 	public static void main(String[] args) {
