@@ -39,6 +39,14 @@ public class Lineage2Craft {
 		break;
 		}
 		System.out.println("Gracias por usar a BuenHombre");
-	}
-
+	//	System.out.println("");
+	//	System.out.println("Quieres seguir crafeando?");
+	//	String EnterOptionTwo = input.toString();
+		
+	//	if (EnterOptionTwo == "yes") {
+	//		System.out.println("Po mu bien");
+	//	}System.out.println("Pos mu mal");
+	 }
+	
+	
 }
