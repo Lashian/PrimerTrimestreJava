@@ -3,17 +3,18 @@ import java.util.Scanner;
 public class Lineage2Craft {
 
 	public static void main(String[] args) {
+		int EnterOption=0;
 		// TODO Auto-generated method stub
-
+ do {
 		int Craft = (int) (Math.random()*100);
 		Scanner input = new Scanner (System.in);
 		System.out.println("Menu");
 		System.out.println("1.- Craftear Arma Dyansty");
 		System.out.println("2.- Craftear Armadura Dynasty");
 		System.out.println("3.- Craftear joyeria Dynasty");
-		
+		System.out.println("4.- Exit");
 		System.out.println("Selecciona el tipo de craft que queires realizar: ");
-		int EnterOption = input.nextInt();
+		EnterOption = input.nextInt();
 		
 		switch(EnterOption) {
 		
@@ -38,6 +39,7 @@ public class Lineage2Craft {
 		}else System.out.println("You failed your craft. " + "Loguea al spoiler que te veo farmeando los Tons otra vez");
 		break;
 		}
+ }while(EnterOption!=4);
 		System.out.println("Gracias por usar a BuenHombre");
 	//	System.out.println("");
 	//	System.out.println("Quieres seguir crafeando?");
