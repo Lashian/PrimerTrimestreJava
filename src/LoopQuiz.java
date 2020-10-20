@@ -15,12 +15,16 @@ public class LoopQuiz {
 		
 		int EnterResultado = 0;
 		EnterResultado = input.nextInt();
-		
+		int intentos = 0;
 		while (EnterResultado != Resultado) {
 			System.out.println("Tu respuesta no es correcta, intentalo de nuevo");
 			EnterResultado = input.nextInt();
+			intentos ++;
 		}
-		System.out.println("Has acertado!");
+		
+		if(intentos <= 1) {
+			System.out.println("Has acertado sin fallar ninguna vez");
+		} else System.out.println("Has acertado pero has tenido " + intentos + " fallos.");
 	}
 
 }
