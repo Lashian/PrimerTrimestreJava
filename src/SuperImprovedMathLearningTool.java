@@ -26,9 +26,9 @@ public class SuperImprovedMathLearningTool {
         	 System.out.println(mensaje);        
         	 int respuesta = input.nextInt();
         	
-        	 if(respuesta == correctAnswer) aciertos++;
-        	
-        	
+        	 if(respuesta == correctAnswer) 
+        		 aciertos++;
+        	 
         }
         //Falta arreglar el tiempo empleado
          terminaTiempo = System.currentTimeMillis();
@@ -37,4 +37,5 @@ public class SuperImprovedMathLearningTool {
         	System.out.println("Enhorabuena, has aprobado. Has tardado: " + ((terminaTiempo - empiezaTiempo )) + " segundos" );
         } else System.out.println("Lo sentimos, has suspendido." + ((terminaTiempo - empiezaTiempo )) + " segundos" );
     } 
-}
+  }
+
