@@ -4,75 +4,37 @@ public class SuperImprovedMathLearningTool {
 
     public static void main(String[] args) {
         @SuppressWarnings("resource")
-		/*Scanner input = new Scanner (System.in);
-        int a = (int) (Math.random() *10);
-        int b = (int) (Math.random() *10);
-        int CorrectAnswer = a >= b ? a - b : b - a;
-        int i = 0;
-        int Aciertos = 0;
-        int Fallos = 0;
-        System.out.println("Bienvenido a Problemas matematicos.");
-        System.out.println("Introduce la solucion a la siguiente question: ");
 
-        int EnterAnswer = 0;
-       
-        System.out.println("Cuanto es " +a  + (-b) + "?"); 
-        EnterAnswer = input.nextInt();
-        while (i <4 && EnterAnswer == CorrectAnswer) {
-        	System.out.println("Has acertado");
-        	System.out.println("Cuanto es " +a +  (-b) + "?");
-        	EnterAnswer = input.nextInt();
-        	Aciertos++;
-        	i++;
-        		while(i <4 && EnterAnswer != CorrectAnswer) {
-        		System.out.println("No has acertado");
-        		System.out.println("Cuanto es " +a +  (-b) + "?");
-            	EnterAnswer = input.nextInt();
-            	Fallos++;
-            	i++;
-        		}
-        } 
-        System.out.println("Has obtenido: " + Aciertos + "aciertos y "  + Fallos + " fallos.");
-       */
-        
-        
-        /*RAUL*/
         Scanner input = new Scanner (System.in);
-        final int NUMERO_TOTAL_PREGUNTAS = 5;
+        System.out.println("Introduce el numero de preguntas que quieres resolver:");
+        int numeroPreguntas = input.nextInt();
         int aciertos = 0;
- /*      //int index = 1;
+        long empiezaTiempo = System.currentTimeMillis();
+        long terminaTiempo = System.currentTimeMillis();
         
-        while(index <= NUMERO_TOTAL_PREGUNTAS) {
+        for(int index = 1; index <= numeroPreguntas; index++) {
         	 int a = (int) (Math.random() *10);
              int b = (int) (Math.random() *10);
+            
              int correctAnswer = a >= b ? a - b : b - a;
-             String operation = a >= b ?  a +"-"+ b  :  b +"-"+ a;
-             String msg = "Cuanto es " + operation + "?";
-        	 System.out.println(msg);        
-        	 int resp = input.nextInt();
+             String operacion = a >= b ?  a +"-"+ b  :  b +"-"+ a;
+             System.out.println();
+             System.out.println("Pregunta numero: " + index);
+             System.out.println("Resuelve la siguiente operacion: ");
+             //TEST Metiendo "print" dentro de un String TEST
+             String mensaje = "Cuanto es " + operacion + "?";
+        	 System.out.println(mensaje);        
+        	 int respuesta = input.nextInt();
         	
-        	 if(resp == correctAnswer) aciertos++;
+        	 if(respuesta == correctAnswer) aciertos++;
         	
-        	index++;
-        }*/
-        
-        for(int index = 1; index <= NUMERO_TOTAL_PREGUNTAS; index++) {
-        	 int a = (int) (Math.random() *10);
-             int b = (int) (Math.random() *10);
-             int correctAnswer = a >= b ? a - b : b - a;
-             String operation = a >= b ?  a +"-"+ b  :  b +"-"+ a;
-             String msg = "Cuanto es " + operation + "?";
-        	 System.out.println(msg);        
-        	 int resp = input.nextInt();
         	
-        	 if(resp == correctAnswer) aciertos++;
         }
-        
-        System.out.println("Has obtenido " + aciertos + " aciertos y "+ (NUMERO_TOTAL_PREGUNTAS - aciertos) +" fallos.");
-        
-        
-        
-        
-        
+        //Falta arreglar el tiempo empleado
+         terminaTiempo = System.currentTimeMillis();
+        System.out.println("Has obtenido " + aciertos + " aciertos y "+ (numeroPreguntas - aciertos) +" fallos.");
+        if (aciertos >= (numeroPreguntas - aciertos)) {
+        	System.out.println("Enhorabuena, has aprobado. Has tardado: " + ((terminaTiempo - empiezaTiempo )) + " segundos" );
+        } else System.out.println("Lo sentimos, has suspendido." + ((terminaTiempo - empiezaTiempo )) + " segundos" );
     } 
 }

@@ -11,16 +11,19 @@ public class GuessNumber {
 		int EnterNumber = 0;
 		EnterNumber = input.nextInt();
 		
-		while (EnterNumber < CorrectNumber) {
+		while (EnterNumber != CorrectNumber) {
+			if (EnterNumber < CorrectNumber) {
 			System.out.println("Muy bajo");
 			EnterNumber = input.nextInt();
-			while(EnterNumber > CorrectNumber) {
+			}
+			else if (EnterNumber > CorrectNumber) {
+			
 				System.out.println("Muy alto");
 				EnterNumber = input.nextInt();
+			
 			}
-			
-			
-		}
+			}
+		
 		System.out.println("Has acertado");
 	}
 
