@@ -8,20 +8,16 @@ public class NumeroPrimo {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Introce un numero");
 		int enterPrimo = input.nextInt();
-		int i = 0;
+		boolean isPrimo = true;
 		
-		for (i = 1; i <= enterPrimo; i++ ) {
-			if(((enterPrimo % i) == 0) && ((enterPrimo / i) == 1)) {
-				System.out.println(i);
-				System.out.println("El numero  es primo.");	
-			} 
-
-			else System.out.println("Numero no es primo.");
-					
+		for (int i = 2; i < enterPrimo; i++ ) {		
+			if ((enterPrimo % i) == 0) {
+				isPrimo = false;
+				break; 
 			}
+		}
+	
+		System.out.println(isPrimo ? "Es primo" : "No es Primo");
 		}
 
 	}
-
-
-// 		if((((enterPrimo % i) != 0)) && ( (enterPrimo / i) != 1 ) )
