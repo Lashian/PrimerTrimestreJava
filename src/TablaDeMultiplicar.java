@@ -14,6 +14,7 @@ public class TablaDeMultiplicar {
 			Result = EnterNumber * i;
 			System.out.println(Result);
 		}
+		
 	}
 
 }
