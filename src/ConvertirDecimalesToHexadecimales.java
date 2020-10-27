@@ -51,8 +51,20 @@ public class ConvertirDecimalesToHexadecimales {
 			}
 
 		}
-
-		System.out.println(resultado);
+		//Usando el String Builder para darle la vuelta a un String
+		 String input2 = resultado;
+		 
+	        StringBuilder input1 = new StringBuilder();
+	 
+	        // append a string into StringBuilder input1
+	        input1.append(input2);
+	 
+	        // reverse StringBuilder input1
+	        input1 = input1.reverse();
+	 
+	        // print reversed String
+	        System.out.println(input1);
+		 
 		
 		
 		
