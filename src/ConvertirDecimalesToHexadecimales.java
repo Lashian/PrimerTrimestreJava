@@ -65,9 +65,9 @@ public class ConvertirDecimalesToHexadecimales {
 	        // print reversed String
 	        System.out.println(input1);
 		 
-		
-		
-		
+	}
+
+}
 		
 		
 		
@@ -116,7 +116,3 @@ public class ConvertirDecimalesToHexadecimales {
 //		}
 //		
 //		System.out.println(resultado);
-
-	}
-
-}
