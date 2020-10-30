@@ -13,7 +13,6 @@ public class NumeroPrimo {
 		for (int i = 2; i < enterPrimo; i++ ) {		
 			if ((enterPrimo % i) == 0) {
 				isPrimo = false;
-				break; 
 			}
 		}
 	
