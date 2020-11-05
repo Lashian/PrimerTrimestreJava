@@ -44,9 +44,10 @@ public class FinalMenu {
 				System.out.println("The Hexadecimal number is: ");
 				ConvertirDecimalesToHexadecimales(enterDecimal);
 				break;
+			case 5: //hexadecimal to decimal
 			}
 
-		} while (op != 5);
+		} while (op != 6);
 		System.out.println("Thank you for using this program!");
 	}
 
@@ -58,17 +59,15 @@ public class FinalMenu {
 		System.out.println("\t\t1.- Is prime");
 		System.out.println("\t\t2.- Convert temperatures");
 		System.out.println("\t\t3.- Greatest Common Divisor");
-		System.out.println("\t\t4.- Decimal number yo hexadecimal");
-		System.out.println("\t\t5.- Exit");
+		System.out.println("\t\t4.- Decimal number to hexadecimal");
+		System.out.println("\t\t5.- Hexadecimal number to decimal");
+		System.out.println("\t\t6.- Exit");
 		System.out.println("\t\t\t Your choice");
 		op = input.nextInt();
 		return op;
 	}
 
 	public static boolean NumeroPrimo(int n) {
-		// Scanner input = new Scanner(System.in);
-		// System.out.println("Introce un numero");
-		// int enterPrimo = input.nextInt();
 		boolean isPrimo = true;
 		for (int i = 2; i < n; i++) {
 			if ((n % i) == 0) {
@@ -151,4 +150,21 @@ public class FinalMenu {
 		return input2;
 
 	}
-}
+	
+	public static int HexadecimalToDecimal (String hexadecimal) {
+		int decimal = 0;
+		hexadecimal = hexadecimal.toUpperCase();
+		int high = hexadecimal.length() -1;
+		for (int i = 1; i <= high; i++) {
+			char character = hexadecimal.charAt(i);
+			int digit;
+			if(character >= '0' && character <= '9') 
+				// el '0' representa al numero ASCII del 0
+				digit = character - '0';
+				else if(character >= 'A' && character <= 'F') 
+					digit = character - 'A' +10;
+				  else return 0;		
+			decimal += digit*Math.pow(16, high-i);
+			}return decimal;
+		} 
+	}
