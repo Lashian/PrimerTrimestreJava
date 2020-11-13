@@ -28,7 +28,7 @@ public class RandomCharacters {
 				System.out.println("Generate key");
 				System.out.println("How long you wanna make your key?");
 				int larga = input.nextInt();
-				generateKey(larga);
+				System.out.println("Your key is: " + generateKey(larga));
 				break;
 			}
 		} while (op != 5);
@@ -66,12 +66,36 @@ public class RandomCharacters {
 	}
 
 	public static char randomUpperCaseChar() {
-		// I values from 65 - 90 where, 65 and 90 are inclusive.
+		// ASCII values from 65 - 90 where, 65 and 90 are inclusive.
 		char upper = (char) ((char) (Math.random() * 26) + 65);
 	
 		return upper;
 	}
-
+//Manera de hacerlo de Toñi de generar las char donde start seria "1", "a" o "A" y end pues 9, z, Z
+//Arriba en el menu, solo tendriamos que meter en el start y end el ASCII de lo que queramos sacar
+	public static char randomChar (char start, char end) {
+		return (char) (start + (int) (Math.random()*(end-start)));
+	}
+	
+//Manera de Toñi de crear las contraseñas
+	public static String randomPassword() {
+		String pw = "";
+		for (int i = 1; i <= 10; i++) {
+			int r = (int)(Math.random()*3);
+			char c;
+			switch(r) {
+				case 0: c = randomChar('0', '9');
+				break;
+				case 1: c = randomChar('a', 'z');
+				break;
+				default: c = randomChar('A', 'Z');
+				break;
+			}
+			pw +=c;
+		}
+		return pw;
+	}
+	
 	public static String generateKey(int larga) {
 		String key = "";
 		for (int i = 1; i <= larga; i++) {		
@@ -84,7 +108,6 @@ public class RandomCharacters {
 			} else
 				key += 	randomUpperCaseChar();	
 		}
-		System.out.println("Your key is: " + key);
 		return key;
 	}
 
