@@ -21,14 +21,13 @@ public class Cards {
 				break;
 			case 3:
 				int card = dealCard(deck);
-				if(card !=0)
-				System.out.println(cardToString(card));
+				if (card != 0)
+					System.out.println(cardToString(card));
 				else {
 					System.out.println("Shuffling...Choose 3 again");
-					top =0;
+					top = 0;
 					shuffle(deck);
 				}
-
 			}
 
 		} while (op != 4);
@@ -40,6 +39,20 @@ public class Cards {
 		}
 
 	}
+	
+	public static double cardValue (int[] deck) {
+		double cardValue = 0;
+		for (int i = top; i < deck.length; i++) {
+			cardValue = deck[i];
+			System.out.println(cardValue);
+			//System.out.println(getCardValue(deck[i]) + "de" + getSuit(deck[i]));
+		}
+		
+		
+		return cardValue;
+	}
+	
+	
 
 	public static String getCardValue(int c) {
 		String[] cards = { "Rey", "AS", "1", "2", "3", "4", "5", "6", "7", "Sota", "Caballo" };
@@ -76,12 +89,14 @@ public class Cards {
 
 	}
 
-	public static int dealCard(int deck[]) {  //
-		if(top == deck.length)
+	public static int dealCard(int[] deck) { //
+		if (top == deck.length)
 			return 0;
 		return deck[top++];
 	}
 
+	
+	  
 	public static int menu() {
 		Scanner input = new Scanner(System.in);
 		int op = 0;
